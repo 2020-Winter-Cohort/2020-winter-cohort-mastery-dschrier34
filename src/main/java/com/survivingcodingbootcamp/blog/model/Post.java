@@ -16,6 +16,7 @@ public class Post {
     private Collection<Hashtag> hashtags;
     @Lob
     private String content;
+    private String author;
 
     protected Post() {
     }
@@ -24,10 +25,11 @@ public class Post {
         return hashtags;
     }
 
-    public Post(String title, Topic topic, String content, Hashtag...hashtags) {
+    public Post(String title, Topic topic, String content, String author, Hashtag...hashtags) {
         this.title = title;
         this.topic = topic;
         this.content = content;
+        this.author = author;
         this.hashtags = List.of(hashtags);
     }
 
@@ -47,10 +49,15 @@ public class Post {
         return content;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public void addHashtag(Hashtag inHashtag) {
         hashtags.add(inHashtag);
     }
-    public void addHashtags(Hashtag inHashtags) {this.hashtags.add(inHashtags); }
+
+//    public void addHashtags(Hashtag inHashtags) {this.hashtags.add(inHashtags); }
 
     @Override
     public String toString() {

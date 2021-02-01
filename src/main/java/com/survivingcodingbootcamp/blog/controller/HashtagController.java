@@ -39,4 +39,12 @@ public class HashtagController {
         return "redirect:/posts/" + postId;
     }
 
+    @PostMapping("/hashtag/post/{id}")
+    public String displayPostsInHashtag(Model model, @PathVariable long id) {
+        model.addAttribute("post", postStorage.retrievePostById(id));
+        model.addAttribute("allHashtags", hashtagStorage.retrieveAllHashtags());
+        model.addAttribute("postInHash", postStorage.retrieveAllPosts());
+        return "single-hashtag-template";
+
+    }
 }
