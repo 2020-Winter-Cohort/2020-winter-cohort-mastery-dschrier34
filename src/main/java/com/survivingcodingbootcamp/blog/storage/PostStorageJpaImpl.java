@@ -34,4 +34,6 @@ public class PostStorageJpaImpl implements PostStorage {
         newPost.addHashtag(hashtagToAdd);
         save(newPost);
     }
+
+
 }

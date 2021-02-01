@@ -34,6 +34,10 @@ public class Topic {
         return posts;
     }
 
+    public void addPostToTopic(Post inPost) {
+        posts.add(inPost);
+    }
+
     @Override
     public String toString() {
         return "Topic{" +

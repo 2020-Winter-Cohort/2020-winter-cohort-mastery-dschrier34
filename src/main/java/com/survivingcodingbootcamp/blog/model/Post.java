@@ -57,8 +57,6 @@ public class Post {
         hashtags.add(inHashtag);
     }
 
-//    public void addHashtags(Hashtag inHashtags) {this.hashtags.add(inHashtags); }
-
     @Override
     public String toString() {
         return "Post{" +
@@ -66,6 +64,7 @@ public class Post {
                 ", title='" + title + '\'' +
                 ", topic=" + topic +
                 ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
                 '}';
     }
 
